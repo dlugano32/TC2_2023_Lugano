@@ -24,3 +24,8 @@
 #Jupyter Notebooks #
 #######
 *.ipynb_checkpoints
+
+#LTSPICE junk
+
+*.raw
+*.log
