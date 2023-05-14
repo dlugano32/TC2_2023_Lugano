@@ -21,8 +21,10 @@ ws = 3
 # epsilon cuadrado
 ee = 10**(alfa_max/10)-1
 
+alfa_min_c=[]
+
 for nn in range(2,9):
-    alfa_min_c = 10*np.log10(1 + ee * np.cosh(nn * np.arccosh(ws))**2 )
+    alfa_min_c.append(10*np.log10(1 + ee * np.cosh(nn * np.arccosh(ws))**2 ))
 
 # elijo un orden luego de iterar ...
 nn = 5
