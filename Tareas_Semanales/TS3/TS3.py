@@ -21,6 +21,7 @@ alfa_min=35
 N,D = mp.MP_aprox(ws, alfa_max, alfa_min)
 T = TransferFunction(N, D)
 
+
 bodePlot(T, fig_id=1)
 pzmap(T, fig_id=2 )
 GroupDelay(T, fig_id=3)
