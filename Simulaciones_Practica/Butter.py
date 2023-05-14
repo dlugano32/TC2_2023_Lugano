@@ -9,7 +9,7 @@ Created on Sat Apr 29 13:39:56 2023
 from scipy.signal import TransferFunction
 import matplotlib.pyplot as plt
 import numpy as np
-import module_MP as mp
+import module_MP_HP as mp2
 
 from pytc2.sistemas_lineales import pzmap, GroupDelay, bodePlot
 
@@ -18,8 +18,9 @@ ws=3.5
 alfa_max=1
 alfa_min=35
 
-N,D = mp.MP_aprox(ws, alfa_max, alfa_min)
+N,D = mp2.MP_aprox_hp(ws, alfa_max, alfa_min)
 T = TransferFunction(N, D)
+
 
 bodePlot(T, fig_id=1)
 pzmap(T, fig_id=2 )
