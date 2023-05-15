@@ -5,11 +5,14 @@ Created on Thu May  4 22:34:22 2023
 
 @author: dlugano
 """
-import scipy.signal as sig
-from scipy.signal import TransferFunction
-import matplotlib.pyplot as plt
 import numpy as np
+import matplotlib as mpl
+import scipy.signal as sig
+import matplotlib.pyplot as plt
+from scipy.signal import TransferFunction
 
+from pytc2.sistemas_lineales import analyze_sys, pretty_print_lti, tf2sos_analog, pretty_print_SOS
+from pytc2.general import print_latex, print_subtitle
 from pytc2.sistemas_lineales import pzmap, GroupDelay, bodePlot
 
 
@@ -32,6 +35,7 @@ nn = 5
 # verificación Cheby
 z,p,k = sig.cheb1ap(nn, alfa_max)
 num_cheb, den_cheb = sig.zpk2tf(z,p,k)
+num_cheb, den_cheb = sig.lp2hp(num_cheb, den_cheb ) #Esta funcion cambia el filtro para otra frecuencia. Es la renormalización del filtro para epsilon distinto de 1
 
 T=TransferFunction(num_cheb, den_cheb)
 
