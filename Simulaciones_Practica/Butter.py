@@ -14,9 +14,9 @@ import module_MP_HP as mp2
 from pytc2.sistemas_lineales import pzmap, GroupDelay, bodePlot
 
 #wp=1
-ws=3.5
+ws=4
 alfa_max=1
-alfa_min=35
+alfa_min=30
 
 N,D = mp2.MP_aprox_hp(ws, alfa_max, alfa_min)
 T = TransferFunction(N, D)

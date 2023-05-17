@@ -16,8 +16,8 @@ from pytc2.general import print_latex, print_subtitle
 from pytc2.sistemas_lineales import pzmap, GroupDelay, bodePlot
 
 
-alfa_max = 0.4
-ws = 3
+alfa_max = 1
+ws = 4
 
 # cuentas auxiliares
 

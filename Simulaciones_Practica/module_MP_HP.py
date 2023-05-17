@@ -17,8 +17,8 @@ def MP_aprox_hp(ws, alpha_max, alpha_min):    #Funciones de aproximacion por max
 
     z,p,k = sig.buttap (order)
     N, D = sig.zpk2tf(z, p, k)
-    N, D = sig.lp2hp(N, D, xi**(-1/order) ) #Esta funcion cambia el filtro para otra frecuencia. Es la renormalización del filtro para epsilon distinto de 1
-    
+    N, D = sig.lp2lp(N, D, xi**(-1/order) ) #Esta funcion cambia el filtro para otra frecuencia. Es la renormalización del filtro para epsilon distinto de 1
+    N,D = sig.lp2hp(N,D)
     z,p,k=sig.tf2zpk(N,D)
     
     return N, D
