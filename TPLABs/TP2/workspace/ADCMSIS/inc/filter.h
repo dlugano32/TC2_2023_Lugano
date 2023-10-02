@@ -15,6 +15,7 @@
 #include <stdint.h>
 
 #define FIR_TAP_NUM 37
+//#define FIR_TAP_NUM 201
 #define IIR_TAP_NUM 6
 
 #define SAMPLES_PER_BLOCK 1024
