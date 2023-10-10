@@ -19,8 +19,6 @@ RM := rm -rf
 -include src/dspcode/CommonTables/subdir.mk
 -include src/dspcode/BasicMathFunctions/subdir.mk
 -include src/Common/Source/subdir.mk
--include objects.mk
-
 ifneq ($(MAKECMDGOALS),clean)
 ifneq ($(strip $(C_DEPS)),)
 -include $(C_DEPS)
@@ -50,7 +48,7 @@ all:
 main-build: libCMSIS_DSPLIB_CM4.a
 
 # Tool invocations
-libCMSIS_DSPLIB_CM4.a: $(OBJS) $(USER_OBJS) makefile objects.mk $(OPTIONAL_TOOL_DEPS)
+libCMSIS_DSPLIB_CM4.a: $(OBJS) $(USER_OBJS) makefile $(OPTIONAL_TOOL_DEPS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: MCU Archiver'
 	arm-none-eabi-ar -r  "libCMSIS_DSPLIB_CM4.a" $(OBJS) $(USER_OBJS) $(LIBS)
@@ -64,7 +62,7 @@ clean:
 
 post-build:
 	-@echo 'Performing post-build steps'
-	-arm-none-eabi-size libCMSIS_DSPLIB_CM4.a ;  cp -v libCMSIS_DSPLIB_CM4.a "C:\Users\asus rog gl552vwdh71\Desktop\TCII\2022\TPL\TPL2\workspace\TCII_2_0\ultimo\workspace/CMSIS_DSPLIB_CM4/lib/";
+	-arm-none-eabi-size libCMSIS_DSPLIB_CM4.a ;  cp -v libCMSIS_DSPLIB_CM4.a "C:\Users\ipave\OneDrive\Documentos\workspace/CMSIS_DSPLIB_CM4/lib/";
 	-@echo ' '
 
 .PHONY: all clean dependents main-build post-build

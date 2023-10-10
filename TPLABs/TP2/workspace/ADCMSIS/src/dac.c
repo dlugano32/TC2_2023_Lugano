@@ -2,7 +2,7 @@
 ===============================================================================
  Name        : dac.c
  Author      : Israel Pavelek, Cesar Fuoco
- Version     : 1.0
+ Version     : 1.2
  Copyright   : $(copyright)
  Description : main definition
 ===============================================================================

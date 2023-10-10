@@ -1,11 +1,12 @@
 /*
  * GENERATED FILE - DO NOT EDIT
- * Copyright 2008-2013 Code Red Technologies Ltd,
- * Copyright 2013-2023 NXP
+ * Copyright (c) 2008-2013 Code Red Technologies Ltd,
+ * Copyright 2015, 2018-2019 NXP
+ * (c) NXP Semiconductors 2013-2023
  * Generated linker script file for LPC1769
  * Created from linkscript.ldt by FMCreateLinkLibraries
  * Using Freemarker v2.3.30
- * MCUXpresso IDE v11.8.0 [Build 1165] [2023-07-26] on Oct 7, 2023, 6:56:30 PM
+ * MCUXpresso IDE v11.7.1 [Build 9221] [2023-03-28] on 10 Oct 2023, 15:39:32
  */
 
 INCLUDE "ADCMSIS_Debug_library.ld"
@@ -119,7 +120,7 @@ SECTIONS
     } > RamLoc32 AT>MFlash512
 
     /* BSS section for RamAHB32 */
-    .bss_RAM2 (NOLOAD) : ALIGN(4)
+    .bss_RAM2 : ALIGN(4)
     {
        PROVIDE(__start_bss_RAM2 = .) ;
        PROVIDE(__start_bss_RamAHB32 = .) ;
@@ -133,7 +134,7 @@ SECTIONS
     } > RamAHB32 AT> RamAHB32
 
     /* MAIN BSS SECTION */
-    .bss (NOLOAD) : ALIGN(4)
+    .bss : ALIGN(4)
     {
         _bss = .;
         PROVIDE(__start_bss_RAM = .) ;

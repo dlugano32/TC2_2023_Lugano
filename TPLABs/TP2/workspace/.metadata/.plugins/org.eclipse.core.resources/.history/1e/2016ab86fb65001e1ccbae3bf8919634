@@ -1,0 +1,26 @@
+/*
+===============================================================================
+ Name        : filter.c
+ Authors     : Israel Pavelek, Cesar Fuoco
+ Version     : 1.0
+ Copyright   : $(copyright)
+ Description : main definition
+===============================================================================
+*/
+
+#include "filter.h"
+#include <stdint.h>
+
+
+int32_t fir_taps[FIR_TAP_NUM] = {0};
+float32_t float_fir_taps[FIR_TAP_NUM] = {0};
+int32_t iir_taps[IIR_TAP_NUM] = {0};
+float32_t float_iir_taps[IIR_TAP_NUM] = {	0.004087,0.008174,0.004087,1.707, -0.7315,
+											0.01, 0.02,  0.0099, 1.8526, -0.8793 };
+
+
+
+
+
+
+

@@ -41,7 +41,7 @@ main-build: ADCMSIS.axf
 ADCMSIS.axf: $(OBJS) $(USER_OBJS) makefile $(OPTIONAL_TOOL_DEPS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: MCU Linker'
-	arm-none-eabi-gcc -nostdlib -L"/home/dlugano/UTN/4to/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_board_nxp_lpcxpresso_1769/Debug" -L"/home/dlugano/UTN/4to/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug" -L"/home/dlugano/UTN/4to/TC2_2023_Lugano/TPLABs/TP2/workspace/CMSIS_DSPLIB_CM3/lib" -Xlinker -Map="ADCMSIS.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T ADCMSIS_Debug.ld -o "ADCMSIS.axf" $(OBJS) $(USER_OBJS) $(LIBS) -llpc_board_nxp_lpcxpresso_1769 -llpc_chip_175x_6x -lCMSIS_DSPLIB_CM3
+	arm-none-eabi-gcc -nostdlib -L"/home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_board_nxp_lpcxpresso_1769/Debug" -L"/home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug" -L"/home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/CMSIS_DSPLIB_CM3/lib" -Xlinker -Map="ADCMSIS.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T ADCMSIS_Debug.ld -o "ADCMSIS.axf" $(OBJS) $(USER_OBJS) $(LIBS) -llpc_board_nxp_lpcxpresso_1769 -llpc_chip_175x_6x -lCMSIS_DSPLIB_CM3
 	@echo 'Finished building target: $@'
 	@echo ' '
 

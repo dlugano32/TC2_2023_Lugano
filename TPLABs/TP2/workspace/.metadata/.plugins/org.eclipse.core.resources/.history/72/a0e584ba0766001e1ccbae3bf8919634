@@ -1,0 +1,32 @@
+/*
+===============================================================================
+ Name        : filter.c
+ Authors     : Israel Pavelek, Cesar Fuoco
+ Version     : 1.2
+ Copyright   : $(copyright)
+ Description : main definition
+===============================================================================
+*/
+
+#include "filter.h"
+#include "arm_math.h"
+#include <stdint.h>
+
+
+int32_t fir_taps[FIR_TAP_NUM] = {0};
+float32_t float_fir_taps[FIR_TAP_NUM] = {0};
+int32_t iir_taps[IIR_TAP_NUM] = {0};
+float32_t float_iir_taps[IIR_TAP_NUM] = {	0.001587,0.003222,0.001636,1.466524931,-0.5397689943,
+											0.010,0.019996583126,0.010001239931,1.5197669241,-0.5956701035,
+											0.010,0.020003417182,0.009998760409,1.7979669906,-0.8877645832,
+};
+
+//float32_t float_iir_taps[IIR_TAP_NUM] = {	0.004087,0.008174,0.004087,1.707, -0.7315,
+//											0.01, 0.02,  0.0099, 1.8526, -0.8793 };
+
+
+
+
+
+
+

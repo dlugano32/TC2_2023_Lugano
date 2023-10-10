@@ -2,7 +2,7 @@
  ===============================================================================
  Name        : adc.c
  Authors     : Israel Pavelek, Cesar Fuoco
- Version     : 1.0
+ Version     : 1.2
  Copyright   : $(copyright)
  Description : main definition
  ===============================================================================
@@ -22,7 +22,7 @@ extern q31_t OutputA[SAMPLES_PER_BLOCK];
 extern q31_t OutputB[SAMPLES_PER_BLOCK];
 
 #define SAMPLE_RATE 44100
-#define CARGANDO_A 0
+#define CARGANDO_A false
 
 
 void adcInit(void) {
@@ -48,11 +48,11 @@ void ADC_IRQHandler(void) {
 
 	if (estado==CARGANDO_A){
 			InputA[index] = data >> 2 ;
-			dacWrite(OutputA[index]  );
+			dacWrite(OutputA[index]>>2);
 	}
 	else {
 		InputB[index] = data >> 2 ;
-		dacWrite( OutputB[index]  );
+		dacWrite( OutputB[index]>>2);
 	}
 
 	index++;
