@@ -1149,7 +1149,7 @@ END GROUP
                 0x0000000020084000                __top_RamAHB32 = 0x20084000
                 0x0000000020084000                __top_RAM2 = 0x20084000
 
-.text           0x0000000000000000     0x2518
+.text           0x0000000000000000     0x2514
  FILL mask 0xff
                 0x0000000000000000                __vectors_start__ = ABSOLUTE (.)
  *(.isr_vector)
@@ -1158,16 +1158,16 @@ END GROUP
                 0x00000000000000cc                . = ALIGN (0x4)
                 0x00000000000000cc                __section_table_start = .
                 0x00000000000000cc                __data_section_table = .
-                0x00000000000000cc        0x4 LONG 0x2518 LOADADDR (.data)
+                0x00000000000000cc        0x4 LONG 0x2514 LOADADDR (.data)
                 0x00000000000000d0        0x4 LONG 0x10000000 ADDR (.data)
-                0x00000000000000d4        0x4 LONG 0xa0 SIZEOF (.data)
-                0x00000000000000d8        0x4 LONG 0x2518 LOADADDR (.data_RAM2)
+                0x00000000000000d4        0x4 LONG 0x100 SIZEOF (.data)
+                0x00000000000000d8        0x4 LONG 0x2514 LOADADDR (.data_RAM2)
                 0x00000000000000dc        0x4 LONG 0x2007c000 ADDR (.data_RAM2)
                 0x00000000000000e0        0x4 LONG 0x0 SIZEOF (.data_RAM2)
                 0x00000000000000e4                __data_section_table_end = .
                 0x00000000000000e4                __bss_section_table = .
-                0x00000000000000e4        0x4 LONG 0x100000a0 ADDR (.bss)
-                0x00000000000000e8        0x4 LONG 0x620c SIZEOF (.bss)
+                0x00000000000000e4        0x4 LONG 0x10000100 ADDR (.bss)
+                0x00000000000000e8        0x4 LONG 0x6218 SIZEOF (.bss)
                 0x00000000000000ec        0x4 LONG 0x2007c000 ADDR (.bss_RAM2)
                 0x00000000000000f0        0x4 LONG 0x0 SIZEOF (.bss_RAM2)
                 0x00000000000000f4                __bss_section_table_end = .
@@ -1238,305 +1238,305 @@ END GROUP
  .text.adcInit  0x00000000000004cc       0x4c ./src/adc.o
                 0x00000000000004cc                adcInit
  .text.ADC_IRQHandler
-                0x0000000000000518       0xd0 ./src/adc.o
+                0x0000000000000518       0xcc ./src/adc.o
                 0x0000000000000518                ADC_IRQHandler
- .text.dacInit  0x00000000000005e8       0x14 ./src/dac.o
-                0x00000000000005e8                dacInit
+ .text.dacInit  0x00000000000005e4       0x14 ./src/dac.o
+                0x00000000000005e4                dacInit
  .text.dacWrite
-                0x00000000000005fc       0x1c ./src/dac.o
-                0x00000000000005fc                dacWrite
+                0x00000000000005f8       0x1c ./src/dac.o
+                0x00000000000005f8                dacWrite
  .text.SystemInit
-                0x0000000000000618       0x24 ./src/sysinit.o
-                0x0000000000000618                SystemInit
+                0x0000000000000614       0x24 ./src/sysinit.o
+                0x0000000000000614                SystemInit
  .text.Chip_IOCON_Init
-                0x000000000000063c       0x16 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_board_nxp_lpcxpresso_1769/Debug/liblpc_board_nxp_lpcxpresso_1769.a(board.o)
+                0x0000000000000638       0x16 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_board_nxp_lpcxpresso_1769/Debug/liblpc_board_nxp_lpcxpresso_1769.a(board.o)
  .text.Chip_GPIO_Init
-                0x0000000000000652       0x16 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_board_nxp_lpcxpresso_1769/Debug/liblpc_board_nxp_lpcxpresso_1769.a(board.o)
+                0x000000000000064e       0x16 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_board_nxp_lpcxpresso_1769/Debug/liblpc_board_nxp_lpcxpresso_1769.a(board.o)
  .text.Chip_GPIO_SetPinState
-                0x0000000000000668       0x64 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_board_nxp_lpcxpresso_1769/Debug/liblpc_board_nxp_lpcxpresso_1769.a(board.o)
+                0x0000000000000664       0x64 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_board_nxp_lpcxpresso_1769/Debug/liblpc_board_nxp_lpcxpresso_1769.a(board.o)
  .text.Chip_GPIO_WritePortBit
-                0x00000000000006cc       0x2c /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_board_nxp_lpcxpresso_1769/Debug/liblpc_board_nxp_lpcxpresso_1769.a(board.o)
+                0x00000000000006c8       0x2c /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_board_nxp_lpcxpresso_1769/Debug/liblpc_board_nxp_lpcxpresso_1769.a(board.o)
  .text.Chip_GPIO_SetPinDIROutput
-                0x00000000000006f8       0x36 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_board_nxp_lpcxpresso_1769/Debug/liblpc_board_nxp_lpcxpresso_1769.a(board.o)
+                0x00000000000006f4       0x36 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_board_nxp_lpcxpresso_1769/Debug/liblpc_board_nxp_lpcxpresso_1769.a(board.o)
  .text.Chip_GPIO_SetPinDIRInput
-                0x000000000000072e       0x3a /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_board_nxp_lpcxpresso_1769/Debug/liblpc_board_nxp_lpcxpresso_1769.a(board.o)
+                0x000000000000072a       0x3a /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_board_nxp_lpcxpresso_1769/Debug/liblpc_board_nxp_lpcxpresso_1769.a(board.o)
  .text.Chip_GPIO_SetPinDIR
-                0x0000000000000768       0x42 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_board_nxp_lpcxpresso_1769/Debug/liblpc_board_nxp_lpcxpresso_1769.a(board.o)
+                0x0000000000000764       0x42 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_board_nxp_lpcxpresso_1769/Debug/liblpc_board_nxp_lpcxpresso_1769.a(board.o)
  .text.Chip_GPIO_WriteDirBit
-                0x00000000000007aa       0x2e /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_board_nxp_lpcxpresso_1769/Debug/liblpc_board_nxp_lpcxpresso_1769.a(board.o)
+                0x00000000000007a6       0x2e /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_board_nxp_lpcxpresso_1769/Debug/liblpc_board_nxp_lpcxpresso_1769.a(board.o)
  .text.Chip_UART_ConfigData
-                0x00000000000007d8       0x1a /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_board_nxp_lpcxpresso_1769/Debug/liblpc_board_nxp_lpcxpresso_1769.a(board.o)
- *fill*         0x00000000000007f2        0x2 ff
+                0x00000000000007d4       0x1a /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_board_nxp_lpcxpresso_1769/Debug/liblpc_board_nxp_lpcxpresso_1769.a(board.o)
+ *fill*         0x00000000000007ee        0x2 ff
  .text.Board_LED_Init
-                0x00000000000007f4       0x18 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_board_nxp_lpcxpresso_1769/Debug/liblpc_board_nxp_lpcxpresso_1769.a(board.o)
+                0x00000000000007f0       0x18 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_board_nxp_lpcxpresso_1769/Debug/liblpc_board_nxp_lpcxpresso_1769.a(board.o)
  .text.Board_UART_Init
-                0x000000000000080c       0x12 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_board_nxp_lpcxpresso_1769/Debug/liblpc_board_nxp_lpcxpresso_1769.a(board.o)
-                0x000000000000080c                Board_UART_Init
- *fill*         0x000000000000081e        0x2 ff
+                0x0000000000000808       0x12 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_board_nxp_lpcxpresso_1769/Debug/liblpc_board_nxp_lpcxpresso_1769.a(board.o)
+                0x0000000000000808                Board_UART_Init
+ *fill*         0x000000000000081a        0x2 ff
  .text.Board_Debug_Init
-                0x0000000000000820       0x30 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_board_nxp_lpcxpresso_1769/Debug/liblpc_board_nxp_lpcxpresso_1769.a(board.o)
-                0x0000000000000820                Board_Debug_Init
+                0x000000000000081c       0x30 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_board_nxp_lpcxpresso_1769/Debug/liblpc_board_nxp_lpcxpresso_1769.a(board.o)
+                0x000000000000081c                Board_Debug_Init
  .text.Board_LED_Set
-                0x0000000000000850       0x30 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_board_nxp_lpcxpresso_1769/Debug/liblpc_board_nxp_lpcxpresso_1769.a(board.o)
-                0x0000000000000850                Board_LED_Set
+                0x000000000000084c       0x30 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_board_nxp_lpcxpresso_1769/Debug/liblpc_board_nxp_lpcxpresso_1769.a(board.o)
+                0x000000000000084c                Board_LED_Set
  .text.Board_Init
-                0x0000000000000880       0x24 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_board_nxp_lpcxpresso_1769/Debug/liblpc_board_nxp_lpcxpresso_1769.a(board.o)
-                0x0000000000000880                Board_Init
+                0x000000000000087c       0x24 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_board_nxp_lpcxpresso_1769/Debug/liblpc_board_nxp_lpcxpresso_1769.a(board.o)
+                0x000000000000087c                Board_Init
  .text.Chip_SYSCTL_SetFLASHAccess
-                0x00000000000008a4       0x30 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_board_nxp_lpcxpresso_1769/Debug/liblpc_board_nxp_lpcxpresso_1769.a(board_sysinit.o)
+                0x00000000000008a0       0x30 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_board_nxp_lpcxpresso_1769/Debug/liblpc_board_nxp_lpcxpresso_1769.a(board_sysinit.o)
  .text.Board_SetupMuxing
-                0x00000000000008d4       0x1c /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_board_nxp_lpcxpresso_1769/Debug/liblpc_board_nxp_lpcxpresso_1769.a(board_sysinit.o)
-                0x00000000000008d4                Board_SetupMuxing
+                0x00000000000008d0       0x1c /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_board_nxp_lpcxpresso_1769/Debug/liblpc_board_nxp_lpcxpresso_1769.a(board_sysinit.o)
+                0x00000000000008d0                Board_SetupMuxing
  .text.Board_SetupClocking
-                0x00000000000008f0       0x12 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_board_nxp_lpcxpresso_1769/Debug/liblpc_board_nxp_lpcxpresso_1769.a(board_sysinit.o)
-                0x00000000000008f0                Board_SetupClocking
+                0x00000000000008ec       0x12 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_board_nxp_lpcxpresso_1769/Debug/liblpc_board_nxp_lpcxpresso_1769.a(board_sysinit.o)
+                0x00000000000008ec                Board_SetupClocking
  .text.Board_SystemInit
-                0x0000000000000902       0x10 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_board_nxp_lpcxpresso_1769/Debug/liblpc_board_nxp_lpcxpresso_1769.a(board_sysinit.o)
-                0x0000000000000902                Board_SystemInit
+                0x00000000000008fe       0x10 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_board_nxp_lpcxpresso_1769/Debug/liblpc_board_nxp_lpcxpresso_1769.a(board_sysinit.o)
+                0x00000000000008fe                Board_SystemInit
  .text.getFullConvClk
-                0x0000000000000912        0xe /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(adc_17xx_40xx.o)
+                0x000000000000090e        0xe /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(adc_17xx_40xx.o)
  .text.getClkDiv
-                0x0000000000000920       0x4c /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(adc_17xx_40xx.o)
+                0x000000000000091c       0x4c /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(adc_17xx_40xx.o)
  .text.setStartMode
-                0x000000000000096c       0x2c /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(adc_17xx_40xx.o)
-                0x000000000000096c                setStartMode
+                0x0000000000000968       0x2c /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(adc_17xx_40xx.o)
+                0x0000000000000968                setStartMode
  .text.readAdcVal
-                0x0000000000000998       0x40 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(adc_17xx_40xx.o)
-                0x0000000000000998                readAdcVal
+                0x0000000000000994       0x40 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(adc_17xx_40xx.o)
+                0x0000000000000994                readAdcVal
  .text.Chip_ADC_Init
-                0x00000000000009d8       0x74 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(adc_17xx_40xx.o)
-                0x00000000000009d8                Chip_ADC_Init
+                0x00000000000009d4       0x74 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(adc_17xx_40xx.o)
+                0x00000000000009d4                Chip_ADC_Init
  .text.Chip_ADC_ReadValue
-                0x0000000000000a4c       0x24 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(adc_17xx_40xx.o)
-                0x0000000000000a4c                Chip_ADC_ReadValue
+                0x0000000000000a48       0x24 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(adc_17xx_40xx.o)
+                0x0000000000000a48                Chip_ADC_ReadValue
  .text.Chip_ADC_Int_SetChannelCmd
-                0x0000000000000a70       0x48 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(adc_17xx_40xx.o)
-                0x0000000000000a70                Chip_ADC_Int_SetChannelCmd
+                0x0000000000000a6c       0x48 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(adc_17xx_40xx.o)
+                0x0000000000000a6c                Chip_ADC_Int_SetChannelCmd
  .text.Chip_ADC_SetSampleRate
-                0x0000000000000ab8       0x50 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(adc_17xx_40xx.o)
-                0x0000000000000ab8                Chip_ADC_SetSampleRate
+                0x0000000000000ab4       0x50 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(adc_17xx_40xx.o)
+                0x0000000000000ab4                Chip_ADC_SetSampleRate
  .text.Chip_ADC_EnableChannel
-                0x0000000000000b08       0x54 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(adc_17xx_40xx.o)
-                0x0000000000000b08                Chip_ADC_EnableChannel
+                0x0000000000000b04       0x54 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(adc_17xx_40xx.o)
+                0x0000000000000b04                Chip_ADC_EnableChannel
  .text.Chip_ADC_SetBurstCmd
-                0x0000000000000b5c       0x3c /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(adc_17xx_40xx.o)
-                0x0000000000000b5c                Chip_ADC_SetBurstCmd
+                0x0000000000000b58       0x3c /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(adc_17xx_40xx.o)
+                0x0000000000000b58                Chip_ADC_SetBurstCmd
  .text.SystemCoreClockUpdate
-                0x0000000000000b98       0x18 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(chip_17xx_40xx.o)
-                0x0000000000000b98                SystemCoreClockUpdate
+                0x0000000000000b94       0x18 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(chip_17xx_40xx.o)
+                0x0000000000000b94                SystemCoreClockUpdate
  .text.Chip_Clock_IsMainPLLEnabled
-                0x0000000000000bb0       0x24 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
+                0x0000000000000bac       0x24 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
  .text.Chip_Clock_IsMainPLLConnected
-                0x0000000000000bd4       0x24 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
+                0x0000000000000bd0       0x24 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
  .text.Chip_Clock_FeedPLL
-                0x0000000000000bf8       0x34 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
+                0x0000000000000bf4       0x34 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
  .text.Chip_Clock_GetMainPLLSource
-                0x0000000000000c2c       0x20 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
+                0x0000000000000c28       0x20 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
  .text.Chip_Clock_GetMainOscRate
-                0x0000000000000c4c       0x14 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
+                0x0000000000000c48       0x14 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
  .text.Chip_Clock_GetIntOscRate
-                0x0000000000000c60       0x14 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
+                0x0000000000000c5c       0x14 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
  .text.Chip_Clock_GetRTCOscRate
-                0x0000000000000c74       0x14 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
+                0x0000000000000c70       0x14 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
  .text.Chip_Clock_GetMainPLLInClockRate
-                0x0000000000000c88        0xe /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
- *fill*         0x0000000000000c96        0x2 ff
+                0x0000000000000c84        0xe /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
+ *fill*         0x0000000000000c92        0x2 ff
  .text.Chip_Clock_EnablePLL
-                0x0000000000000c98       0x44 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
-                0x0000000000000c98                Chip_Clock_EnablePLL
+                0x0000000000000c94       0x44 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
+                0x0000000000000c94                Chip_Clock_EnablePLL
  .text.Chip_Clock_DisablePLL
-                0x0000000000000cdc       0x48 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
-                0x0000000000000cdc                Chip_Clock_DisablePLL
+                0x0000000000000cd8       0x48 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
+                0x0000000000000cd8                Chip_Clock_DisablePLL
  .text.Chip_Clock_SetupPLL
-                0x0000000000000d24       0x5c /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
-                0x0000000000000d24                Chip_Clock_SetupPLL
+                0x0000000000000d20       0x5c /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
+                0x0000000000000d20                Chip_Clock_SetupPLL
  .text.Chip_Clock_EnablePeriphClock
-                0x0000000000000d80       0x34 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
-                0x0000000000000d80                Chip_Clock_EnablePeriphClock
+                0x0000000000000d7c       0x34 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
+                0x0000000000000d7c                Chip_Clock_EnablePeriphClock
  .text.Chip_Clock_GetCPUClockSource
-                0x0000000000000db4       0x24 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
-                0x0000000000000db4                Chip_Clock_GetCPUClockSource
+                0x0000000000000db0       0x24 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
+                0x0000000000000db0                Chip_Clock_GetCPUClockSource
  .text.Chip_Clock_SetCPUClockDiv
-                0x0000000000000dd8       0x20 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
-                0x0000000000000dd8                Chip_Clock_SetCPUClockDiv
+                0x0000000000000dd4       0x20 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
+                0x0000000000000dd4                Chip_Clock_SetCPUClockDiv
  .text.Chip_Clock_GetCPUClockDiv
-                0x0000000000000df8       0x1c /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
-                0x0000000000000df8                Chip_Clock_GetCPUClockDiv
+                0x0000000000000df4       0x1c /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
+                0x0000000000000df4                Chip_Clock_GetCPUClockDiv
  .text.Chip_Clock_GetPCLKDiv
-                0x0000000000000e14       0x8c /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
-                0x0000000000000e14                Chip_Clock_GetPCLKDiv
+                0x0000000000000e10       0x8c /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
+                0x0000000000000e10                Chip_Clock_GetPCLKDiv
  .text.Chip_Clock_GetSYSCLKRate
-                0x0000000000000ea0       0x3a /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
-                0x0000000000000ea0                Chip_Clock_GetSYSCLKRate
- *fill*         0x0000000000000eda        0x2 ff
+                0x0000000000000e9c       0x3a /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
+                0x0000000000000e9c                Chip_Clock_GetSYSCLKRate
+ *fill*         0x0000000000000ed6        0x2 ff
  .text.Chip_Clock_GetMainPLLOutClockRate
-                0x0000000000000edc       0x54 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
-                0x0000000000000edc                Chip_Clock_GetMainPLLOutClockRate
+                0x0000000000000ed8       0x54 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
+                0x0000000000000ed8                Chip_Clock_GetMainPLLOutClockRate
  .text.Chip_Clock_GetMainClockRate
-                0x0000000000000f30       0x28 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
-                0x0000000000000f30                Chip_Clock_GetMainClockRate
+                0x0000000000000f2c       0x28 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
+                0x0000000000000f2c                Chip_Clock_GetMainClockRate
  .text.Chip_Clock_GetSystemClockRate
-                0x0000000000000f58       0x18 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
-                0x0000000000000f58                Chip_Clock_GetSystemClockRate
+                0x0000000000000f54       0x18 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
+                0x0000000000000f54                Chip_Clock_GetSystemClockRate
  .text.Chip_Clock_GetPeripheralClockRate
-                0x0000000000000f70       0x26 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
-                0x0000000000000f70                Chip_Clock_GetPeripheralClockRate
+                0x0000000000000f6c       0x26 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
+                0x0000000000000f6c                Chip_Clock_GetPeripheralClockRate
  .text.Chip_DAC_Init
-                0x0000000000000f96       0x18 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(dac_17xx_40xx.o)
-                0x0000000000000f96                Chip_DAC_Init
+                0x0000000000000f92       0x18 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(dac_17xx_40xx.o)
+                0x0000000000000f92                Chip_DAC_Init
  .text.Chip_DAC_UpdateValue
-                0x0000000000000fae       0x30 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(dac_17xx_40xx.o)
-                0x0000000000000fae                Chip_DAC_UpdateValue
+                0x0000000000000faa       0x30 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(dac_17xx_40xx.o)
+                0x0000000000000faa                Chip_DAC_UpdateValue
  .text.Chip_DAC_SetBias
-                0x0000000000000fde       0x32 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(dac_17xx_40xx.o)
-                0x0000000000000fde                Chip_DAC_SetBias
+                0x0000000000000fda       0x32 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(dac_17xx_40xx.o)
+                0x0000000000000fda                Chip_DAC_SetBias
  .text.Chip_IOCON_PinMuxSet
-                0x0000000000001010       0x36 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(iocon_17xx_40xx.o)
-                0x0000000000001010                Chip_IOCON_PinMuxSet
+                0x000000000000100c       0x36 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(iocon_17xx_40xx.o)
+                0x000000000000100c                Chip_IOCON_PinMuxSet
  .text.Chip_IOCON_PinMux
-                0x0000000000001046       0x94 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(iocon_17xx_40xx.o)
-                0x0000000000001046                Chip_IOCON_PinMux
+                0x0000000000001042       0x94 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(iocon_17xx_40xx.o)
+                0x0000000000001042                Chip_IOCON_PinMux
  .text.Chip_IOCON_SetPinMuxing
-                0x00000000000010da       0x64 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(iocon_17xx_40xx.o)
-                0x00000000000010da                Chip_IOCON_SetPinMuxing
- *fill*         0x000000000000113e        0x2 ff
+                0x00000000000010d6       0x64 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(iocon_17xx_40xx.o)
+                0x00000000000010d6                Chip_IOCON_SetPinMuxing
+ *fill*         0x000000000000113a        0x2 ff
  .text.Chip_Clock_IsMainPLLEnabled
-                0x0000000000001140       0x24 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(sysinit_17xx_40xx.o)
+                0x000000000000113c       0x24 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(sysinit_17xx_40xx.o)
  .text.Chip_Clock_IsMainPLLLocked
-                0x0000000000001164       0x24 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(sysinit_17xx_40xx.o)
+                0x0000000000001160       0x24 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(sysinit_17xx_40xx.o)
  .text.Chip_Clock_IsMainPLLConnected
-                0x0000000000001188       0x24 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(sysinit_17xx_40xx.o)
+                0x0000000000001184       0x24 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(sysinit_17xx_40xx.o)
  .text.Chip_Clock_EnableCrystal
-                0x00000000000011ac       0x20 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(sysinit_17xx_40xx.o)
+                0x00000000000011a8       0x20 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(sysinit_17xx_40xx.o)
  .text.Chip_Clock_IsCrystalEnabled
-                0x00000000000011cc       0x24 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(sysinit_17xx_40xx.o)
+                0x00000000000011c8       0x24 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(sysinit_17xx_40xx.o)
  .text.Chip_Clock_SetMainPLLSource
-                0x00000000000011f0       0x20 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(sysinit_17xx_40xx.o)
+                0x00000000000011ec       0x20 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(sysinit_17xx_40xx.o)
  .text.Chip_SetupXtalClocking
-                0x0000000000001210       0x90 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(sysinit_17xx_40xx.o)
-                0x0000000000001210                Chip_SetupXtalClocking
+                0x000000000000120c       0x90 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(sysinit_17xx_40xx.o)
+                0x000000000000120c                Chip_SetupXtalClocking
  .text.Chip_UART_SetupFIFOS
-                0x00000000000012a0       0x1a /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
+                0x000000000000129c       0x1a /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
  .text.Chip_UART_ConfigData
-                0x00000000000012ba       0x1a /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
+                0x00000000000012b6       0x1a /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
  .text.Chip_UART_EnableDivisorAccess
-                0x00000000000012d4       0x1e /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
+                0x00000000000012d0       0x1e /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
  .text.Chip_UART_DisableDivisorAccess
-                0x00000000000012f2       0x1e /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
+                0x00000000000012ee       0x1e /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
  .text.Chip_UART_SetDivisorLatches
-                0x0000000000001310       0x26 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
- *fill*         0x0000000000001336        0x2 ff
+                0x000000000000130c       0x26 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
+ *fill*         0x0000000000001332        0x2 ff
  .text.Chip_UART_GetClockIndex
-                0x0000000000001338       0x50 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
+                0x0000000000001334       0x50 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
  .text.Chip_UART_GetClkIndex
-                0x0000000000001388       0x50 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
+                0x0000000000001384       0x50 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
  .text.Chip_UART_Init
-                0x00000000000013d8       0x78 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
-                0x00000000000013d8                Chip_UART_Init
+                0x00000000000013d4       0x78 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
+                0x00000000000013d4                Chip_UART_Init
  .text.Chip_UART_TXEnable
-                0x0000000000001450       0x18 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
-                0x0000000000001450                Chip_UART_TXEnable
+                0x000000000000144c       0x18 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
+                0x000000000000144c                Chip_UART_TXEnable
  .text.Chip_UART_TXDisable
-                0x0000000000001468       0x18 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
-                0x0000000000001468                Chip_UART_TXDisable
+                0x0000000000001464       0x18 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
+                0x0000000000001464                Chip_UART_TXDisable
  .text.Chip_UART_SetBaud
-                0x0000000000001480       0x62 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
-                0x0000000000001480                Chip_UART_SetBaud
- *fill*         0x00000000000014e2        0x2 ff
+                0x000000000000147c       0x62 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
+                0x000000000000147c                Chip_UART_SetBaud
+ *fill*         0x00000000000014de        0x2 ff
  .text.arm_float_to_q31
-                0x00000000000014e4      0x148 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/CMSIS_DSPLIB_CM3/lib/libCMSIS_DSPLIB_CM3.a(arm_float_to_q31.o)
-                0x00000000000014e4                arm_float_to_q31
+                0x00000000000014e0      0x148 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/CMSIS_DSPLIB_CM3/lib/libCMSIS_DSPLIB_CM3.a(arm_float_to_q31.o)
+                0x00000000000014e0                arm_float_to_q31
  .text.arm_max_f32
-                0x000000000000162c      0x228 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/CMSIS_DSPLIB_CM3/lib/libCMSIS_DSPLIB_CM3.a(arm_max_f32.o)
-                0x000000000000162c                arm_max_f32
+                0x0000000000001628      0x228 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/CMSIS_DSPLIB_CM3/lib/libCMSIS_DSPLIB_CM3.a(arm_max_f32.o)
+                0x0000000000001628                arm_max_f32
  .text.arm_biquad_cascade_df1_init_q31
-                0x0000000000001854       0x20 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/CMSIS_DSPLIB_CM3/lib/libCMSIS_DSPLIB_CM3.a(arm_biquad_cascade_df1_init_q31.o)
-                0x0000000000001854                arm_biquad_cascade_df1_init_q31
+                0x0000000000001850       0x20 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/CMSIS_DSPLIB_CM3/lib/libCMSIS_DSPLIB_CM3.a(arm_biquad_cascade_df1_init_q31.o)
+                0x0000000000001850                arm_biquad_cascade_df1_init_q31
  .text.arm_biquad_cascade_df1_q31
-                0x0000000000001874      0x2c0 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/CMSIS_DSPLIB_CM3/lib/libCMSIS_DSPLIB_CM3.a(arm_biquad_cascade_df1_q31.o)
-                0x0000000000001874                arm_biquad_cascade_df1_q31
+                0x0000000000001870      0x2c0 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/CMSIS_DSPLIB_CM3/lib/libCMSIS_DSPLIB_CM3.a(arm_biquad_cascade_df1_q31.o)
+                0x0000000000001870                arm_biquad_cascade_df1_q31
  .text.arm_fir_init_q31
-                0x0000000000001b34       0x24 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/CMSIS_DSPLIB_CM3/lib/libCMSIS_DSPLIB_CM3.a(arm_fir_init_q31.o)
-                0x0000000000001b34                arm_fir_init_q31
+                0x0000000000001b30       0x24 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/CMSIS_DSPLIB_CM3/lib/libCMSIS_DSPLIB_CM3.a(arm_fir_init_q31.o)
+                0x0000000000001b30                arm_fir_init_q31
  .text.arm_fir_q31
-                0x0000000000001b58      0x4f0 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/CMSIS_DSPLIB_CM3/lib/libCMSIS_DSPLIB_CM3.a(arm_fir_q31.o)
-                0x0000000000001b58                arm_fir_q31
+                0x0000000000001b54      0x4f0 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/CMSIS_DSPLIB_CM3/lib/libCMSIS_DSPLIB_CM3.a(arm_fir_q31.o)
+                0x0000000000001b54                arm_fir_q31
  .text.arm_scale_f32
-                0x0000000000002048      0x194 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/CMSIS_DSPLIB_CM3/lib/libCMSIS_DSPLIB_CM3.a(arm_scale_f32.o)
-                0x0000000000002048                arm_scale_f32
- .text.memset   0x00000000000021dc        0x4 /usr/local/mcuxpressoide-11.7.1_9221/ide/plugins/com.nxp.mcuxpresso.tools.linux_11.7.1.202301190959/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libcr_c.a(memset.o)
-                0x00000000000021dc                memset
+                0x0000000000002044      0x194 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/CMSIS_DSPLIB_CM3/lib/libCMSIS_DSPLIB_CM3.a(arm_scale_f32.o)
+                0x0000000000002044                arm_scale_f32
+ .text.memset   0x00000000000021d8        0x4 /usr/local/mcuxpressoide-11.7.1_9221/ide/plugins/com.nxp.mcuxpresso.tools.linux_11.7.1.202301190959/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libcr_c.a(memset.o)
+                0x00000000000021d8                memset
  .text.__weak_main
-                0x00000000000021e0        0x4 /usr/local/mcuxpressoide-11.7.1_9221/ide/plugins/com.nxp.mcuxpresso.tools.linux_11.7.1.202301190959/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libcr_c.a(__weak__main.o)
-                0x00000000000021e0                __main
-                0x00000000000021e0                __weak_main
+                0x00000000000021dc        0x4 /usr/local/mcuxpressoide-11.7.1_9221/ide/plugins/com.nxp.mcuxpresso.tools.linux_11.7.1.202301190959/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libcr_c.a(__weak__main.o)
+                0x00000000000021dc                __main
+                0x00000000000021dc                __weak_main
  .text.__aeabi_fmul
-                0x00000000000021e4       0xac /usr/local/mcuxpressoide-11.7.1_9221/ide/plugins/com.nxp.mcuxpresso.tools.linux_11.7.1.202301190959/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/libcr_eabihelpers.a(float.o)
-                0x00000000000021e4                __aeabi_fmul
+                0x00000000000021e0       0xac /usr/local/mcuxpressoide-11.7.1_9221/ide/plugins/com.nxp.mcuxpresso.tools.linux_11.7.1.202301190959/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/libcr_eabihelpers.a(float.o)
+                0x00000000000021e0                __aeabi_fmul
  .text.__aeabi_fdiv
-                0x0000000000002290       0xbc /usr/local/mcuxpressoide-11.7.1_9221/ide/plugins/com.nxp.mcuxpresso.tools.linux_11.7.1.202301190959/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/libcr_eabihelpers.a(float.o)
-                0x0000000000002290                __aeabi_fdiv
+                0x000000000000228c       0xbc /usr/local/mcuxpressoide-11.7.1_9221/ide/plugins/com.nxp.mcuxpresso.tools.linux_11.7.1.202301190959/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/libcr_eabihelpers.a(float.o)
+                0x000000000000228c                __aeabi_fdiv
  .text.__aeabi_f2uiz
-                0x000000000000234c       0x28 /usr/local/mcuxpressoide-11.7.1_9221/ide/plugins/com.nxp.mcuxpresso.tools.linux_11.7.1.202301190959/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/libcr_eabihelpers.a(float.o)
-                0x000000000000234c                __aeabi_f2uiz
+                0x0000000000002348       0x28 /usr/local/mcuxpressoide-11.7.1_9221/ide/plugins/com.nxp.mcuxpresso.tools.linux_11.7.1.202301190959/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/libcr_eabihelpers.a(float.o)
+                0x0000000000002348                __aeabi_f2uiz
  .text.__aeabi_f2lz
-                0x0000000000002374       0x5c /usr/local/mcuxpressoide-11.7.1_9221/ide/plugins/com.nxp.mcuxpresso.tools.linux_11.7.1.202301190959/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/libcr_eabihelpers.a(float.o)
-                0x0000000000002374                __aeabi_f2lz
+                0x0000000000002370       0x5c /usr/local/mcuxpressoide-11.7.1_9221/ide/plugins/com.nxp.mcuxpresso.tools.linux_11.7.1.202301190959/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/libcr_eabihelpers.a(float.o)
+                0x0000000000002370                __aeabi_f2lz
  .text.__bhs_ui2f
-                0x00000000000023d0       0x26 /usr/local/mcuxpressoide-11.7.1_9221/ide/plugins/com.nxp.mcuxpresso.tools.linux_11.7.1.202301190959/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/libcr_eabihelpers.a(float.o)
-                0x00000000000023d0                __bhs_ui2f
+                0x00000000000023cc       0x26 /usr/local/mcuxpressoide-11.7.1_9221/ide/plugins/com.nxp.mcuxpresso.tools.linux_11.7.1.202301190959/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/libcr_eabihelpers.a(float.o)
+                0x00000000000023cc                __bhs_ui2f
  .text.__aeabi_i2f
-                0x00000000000023f6       0x12 /usr/local/mcuxpressoide-11.7.1_9221/ide/plugins/com.nxp.mcuxpresso.tools.linux_11.7.1.202301190959/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/libcr_eabihelpers.a(float.o)
-                0x00000000000023f6                __aeabi_i2f
+                0x00000000000023f2       0x12 /usr/local/mcuxpressoide-11.7.1_9221/ide/plugins/com.nxp.mcuxpresso.tools.linux_11.7.1.202301190959/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/libcr_eabihelpers.a(float.o)
+                0x00000000000023f2                __aeabi_i2f
  .text.__aeabi_fcmplt
-                0x0000000000002408       0x3a /usr/local/mcuxpressoide-11.7.1_9221/ide/plugins/com.nxp.mcuxpresso.tools.linux_11.7.1.202301190959/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/libcr_eabihelpers.a(float.o)
-                0x0000000000002408                __aeabi_fcmplt
+                0x0000000000002404       0x3a /usr/local/mcuxpressoide-11.7.1_9221/ide/plugins/com.nxp.mcuxpresso.tools.linux_11.7.1.202301190959/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/libcr_eabihelpers.a(float.o)
+                0x0000000000002404                __aeabi_fcmplt
  .text.__aeabi_fcmpge
-                0x0000000000002442       0x3e /usr/local/mcuxpressoide-11.7.1_9221/ide/plugins/com.nxp.mcuxpresso.tools.linux_11.7.1.202301190959/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/libcr_eabihelpers.a(float.o)
-                0x0000000000002442                __aeabi_fcmpge
+                0x000000000000243e       0x3e /usr/local/mcuxpressoide-11.7.1_9221/ide/plugins/com.nxp.mcuxpresso.tools.linux_11.7.1.202301190959/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/libcr_eabihelpers.a(float.o)
+                0x000000000000243e                __aeabi_fcmpge
  .text.__aeabi_memset_lowlevel
-                0x0000000000002480       0x32 /usr/local/mcuxpressoide-11.7.1_9221/ide/plugins/com.nxp.mcuxpresso.tools.linux_11.7.1.202301190959/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/libcr_eabihelpers.a(memcpy.o)
-                0x0000000000002480                __aeabi_lowlevel_memset
+                0x000000000000247c       0x32 /usr/local/mcuxpressoide-11.7.1_9221/ide/plugins/com.nxp.mcuxpresso.tools.linux_11.7.1.202301190959/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/libcr_eabihelpers.a(memcpy.o)
+                0x000000000000247c                __aeabi_lowlevel_memset
  *(.rodata .rodata.* .constdata .constdata.*)
- *fill*         0x00000000000024b2        0x2 ff
+ *fill*         0x00000000000024ae        0x2 ff
  .rodata.OscRateIn
-                0x00000000000024b4        0x4 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_board_nxp_lpcxpresso_1769/Debug/liblpc_board_nxp_lpcxpresso_1769.a(board.o)
-                0x00000000000024b4                OscRateIn
+                0x00000000000024b0        0x4 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_board_nxp_lpcxpresso_1769/Debug/liblpc_board_nxp_lpcxpresso_1769.a(board.o)
+                0x00000000000024b0                OscRateIn
  .rodata.RTCOscRateIn
-                0x00000000000024b8        0x4 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_board_nxp_lpcxpresso_1769/Debug/liblpc_board_nxp_lpcxpresso_1769.a(board.o)
-                0x00000000000024b8                RTCOscRateIn
+                0x00000000000024b4        0x4 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_board_nxp_lpcxpresso_1769/Debug/liblpc_board_nxp_lpcxpresso_1769.a(board.o)
+                0x00000000000024b4                RTCOscRateIn
  .rodata.pinmuxing
-                0x00000000000024bc       0x5c /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_board_nxp_lpcxpresso_1769/Debug/liblpc_board_nxp_lpcxpresso_1769.a(board_sysinit.o)
-                0x0000000000002518                . = ALIGN (0x4)
+                0x00000000000024b8       0x5c /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_board_nxp_lpcxpresso_1769/Debug/liblpc_board_nxp_lpcxpresso_1769.a(board_sysinit.o)
+                0x0000000000002514                . = ALIGN (0x4)
 
-.glue_7         0x0000000000002518        0x0
- .glue_7        0x0000000000002518        0x0 linker stubs
+.glue_7         0x0000000000002514        0x0
+ .glue_7        0x0000000000002514        0x0 linker stubs
 
-.glue_7t        0x0000000000002518        0x0
- .glue_7t       0x0000000000002518        0x0 linker stubs
+.glue_7t        0x0000000000002514        0x0
+ .glue_7t       0x0000000000002514        0x0 linker stubs
 
-.vfp11_veneer   0x0000000000002518        0x0
- .vfp11_veneer  0x0000000000002518        0x0 linker stubs
+.vfp11_veneer   0x0000000000002514        0x0
+ .vfp11_veneer  0x0000000000002514        0x0 linker stubs
 
-.v4_bx          0x0000000000002518        0x0
- .v4_bx         0x0000000000002518        0x0 linker stubs
+.v4_bx          0x0000000000002514        0x0
+ .v4_bx         0x0000000000002514        0x0 linker stubs
 
-.iplt           0x0000000000002518        0x0
- .iplt          0x0000000000002518        0x0 ./src/ADCMSIS.o
+.iplt           0x0000000000002514        0x0
+ .iplt          0x0000000000002514        0x0 ./src/ADCMSIS.o
 
-.rel.dyn        0x0000000000002518        0x0
- .rel.iplt      0x0000000000002518        0x0 ./src/ADCMSIS.o
+.rel.dyn        0x0000000000002514        0x0
+ .rel.iplt      0x0000000000002514        0x0 ./src/ADCMSIS.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
 
-.ARM.exidx      0x0000000000002518        0x0
-                0x0000000000002518                __exidx_start = .
+.ARM.exidx      0x0000000000002514        0x0
+                0x0000000000002514                __exidx_start = .
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x0000000000002518                __exidx_end = .
-                0x0000000000002518                _etext = .
+                0x0000000000002514                __exidx_end = .
+                0x0000000000002514                _etext = .
 
-.data_RAM2      0x000000002007c000        0x0 load address 0x0000000000002518
+.data_RAM2      0x000000002007c000        0x0 load address 0x0000000000002514
  FILL mask 0xff
                 [!provide]                        PROVIDE (__start_data_RAM2 = .)
                 [!provide]                        PROVIDE (__start_data_RamAHB32 = .)
@@ -1557,7 +1557,7 @@ END GROUP
                 0x0000000010000000                . = ALIGN (0x4)
                 0x0000000010000000                _end_uninit_RESERVED = .
 
-.data           0x0000000010000000       0xa0 load address 0x0000000000002518
+.data           0x0000000010000000      0x100 load address 0x0000000000002514
  FILL mask 0xff
                 0x0000000010000000                _data = .
                 [!provide]                        PROVIDE (__start_data_RAM = .)
@@ -1574,13 +1574,16 @@ END GROUP
  .data.float_fir_taps
                 0x0000000010000004       0x9c ./src/filter.o
                 0x0000000010000004                float_fir_taps
-                0x00000000100000a0                . = ALIGN (0x4)
-                0x00000000100000a0                _edata = .
+ .data.float_iir_taps
+                0x00000000100000a0       0x60 ./src/filter.o
+                0x00000000100000a0                float_iir_taps
+                0x0000000010000100                . = ALIGN (0x4)
+                0x0000000010000100                _edata = .
                 [!provide]                        PROVIDE (__end_data_RAM = .)
                 [!provide]                        PROVIDE (__end_data_RamLoc32 = .)
 
-.igot.plt       0x00000000100000a0        0x0 load address 0x00000000000025b8
- .igot.plt      0x00000000100000a0        0x0 ./src/ADCMSIS.o
+.igot.plt       0x0000000010000100        0x0 load address 0x0000000000002614
+ .igot.plt      0x0000000010000100        0x0 ./src/ADCMSIS.o
 
 .bss_RAM2       0x000000002007c000        0x0
                 [!provide]                        PROVIDE (__start_bss_RAM2 = .)
@@ -1593,49 +1596,46 @@ END GROUP
                 [!provide]                        PROVIDE (__end_bss_RAM2 = .)
                 [!provide]                        PROVIDE (__end_bss_RamAHB32 = .)
 
-.bss            0x00000000100000a0     0x620c
-                0x00000000100000a0                _bss = .
+.bss            0x0000000010000100     0x6218
+                0x0000000010000100                _bss = .
                 [!provide]                        PROVIDE (__start_bss_RAM = .)
                 [!provide]                        PROVIDE (__start_bss_RamLoc32 = .)
  *(.bss*)
- .bss.SFIR      0x00000000100000a0        0xc ./src/ADCMSIS.o
-                0x00000000100000a0                SFIR
- .bss.SIIR      0x00000000100000ac       0x10 ./src/ADCMSIS.o
-                0x00000000100000ac                SIIR
+ .bss.SFIR      0x0000000010000100        0xc ./src/ADCMSIS.o
+                0x0000000010000100                SFIR
+ .bss.SIIR      0x000000001000010c       0x10 ./src/ADCMSIS.o
+                0x000000001000010c                SIIR
  .bss.fir_state
-                0x00000000100000bc     0x1098 ./src/ADCMSIS.o
-                0x00000000100000bc                fir_state
+                0x000000001000011c     0x1098 ./src/ADCMSIS.o
+                0x000000001000011c                fir_state
  .bss.iir_state
-                0x0000000010001154     0x1038 ./src/ADCMSIS.o
-                0x0000000010001154                iir_state
- .bss.InputA    0x000000001000218c     0x1000 ./src/ADCMSIS.o
-                0x000000001000218c                InputA
- .bss.InputB    0x000000001000318c     0x1000 ./src/ADCMSIS.o
-                0x000000001000318c                InputB
- .bss.OutputA   0x000000001000418c     0x1000 ./src/ADCMSIS.o
-                0x000000001000418c                OutputA
- .bss.OutputB   0x000000001000518c     0x1000 ./src/ADCMSIS.o
-                0x000000001000518c                OutputB
- .bss.estado    0x000000001000618c        0x1 ./src/adc.o
-                0x000000001000618c                estado
- .bss.procesar  0x000000001000618d        0x1 ./src/adc.o
-                0x000000001000618d                procesar
- .bss.data.1    0x000000001000618e        0x2 ./src/adc.o
- .bss.index.0   0x0000000010006190        0x2 ./src/adc.o
- *fill*         0x0000000010006192        0x2 
- .bss.fir_taps  0x0000000010006194       0x9c ./src/filter.o
-                0x0000000010006194                fir_taps
- .bss.iir_taps  0x0000000010006230       0x3c ./src/filter.o
-                0x0000000010006230                iir_taps
- .bss.float_iir_taps
-                0x000000001000626c       0x3c ./src/filter.o
-                0x000000001000626c                float_iir_taps
+                0x00000000100011b4     0x105c ./src/ADCMSIS.o
+                0x00000000100011b4                iir_state
+ .bss.InputA    0x0000000010002210     0x1000 ./src/ADCMSIS.o
+                0x0000000010002210                InputA
+ .bss.InputB    0x0000000010003210     0x1000 ./src/ADCMSIS.o
+                0x0000000010003210                InputB
+ .bss.OutputA   0x0000000010004210     0x1000 ./src/ADCMSIS.o
+                0x0000000010004210                OutputA
+ .bss.OutputB   0x0000000010005210     0x1000 ./src/ADCMSIS.o
+                0x0000000010005210                OutputB
+ .bss.estado    0x0000000010006210        0x1 ./src/adc.o
+                0x0000000010006210                estado
+ .bss.procesar  0x0000000010006211        0x1 ./src/adc.o
+                0x0000000010006211                procesar
+ .bss.data.1    0x0000000010006212        0x2 ./src/adc.o
+ .bss.index.0   0x0000000010006214        0x2 ./src/adc.o
+ *fill*         0x0000000010006216        0x2 
+ .bss.fir_taps  0x0000000010006218       0x9c ./src/filter.o
+                0x0000000010006218                fir_taps
+ .bss.iir_taps  0x00000000100062b4       0x60 ./src/filter.o
+                0x00000000100062b4                iir_taps
  .bss.SystemCoreClock
-                0x00000000100062a8        0x4 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(chip_17xx_40xx.o)
-                0x00000000100062a8                SystemCoreClock
+                0x0000000010006314        0x4 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(chip_17xx_40xx.o)
+                0x0000000010006314                SystemCoreClock
  *(COMMON)
-                0x00000000100062ac                . = ALIGN (0x4)
-                0x00000000100062ac                _ebss = .
+                0x0000000010006318                . = ALIGN (0x4)
+                0x0000000010006318                _ebss = .
                 [!provide]                        PROVIDE (__end_bss_RAM = .)
                 [!provide]                        PROVIDE (__end_bss_RamLoc32 = .)
                 [!provide]                        PROVIDE (end = .)
@@ -1651,21 +1651,21 @@ END GROUP
                 [!provide]                        PROVIDE (__end_noinit_RAM2 = .)
                 [!provide]                        PROVIDE (__end_noinit_RamAHB32 = .)
 
-.noinit         0x00000000100062ac        0x0
-                0x00000000100062ac                _noinit = .
+.noinit         0x0000000010006318        0x0
+                0x0000000010006318                _noinit = .
                 [!provide]                        PROVIDE (__start_noinit_RAM = .)
                 [!provide]                        PROVIDE (__start_noinit_RamLoc32 = .)
  *(.noinit*)
-                0x00000000100062ac                . = ALIGN (0x4)
-                0x00000000100062ac                _end_noinit = .
+                0x0000000010006318                . = ALIGN (0x4)
+                0x0000000010006318                _end_noinit = .
                 [!provide]                        PROVIDE (__end_noinit_RAM = .)
                 [!provide]                        PROVIDE (__end_noinit_RamLoc32 = .)
                 [!provide]                        PROVIDE (_pvHeapStart = DEFINED (__user_heap_base)?__user_heap_base:.)
                 0x0000000010008000                PROVIDE (_vStackTop = DEFINED (__user_stack_top)?__user_stack_top:(__top_RamLoc32 - 0x0))
                 0xffffffffefff74c6                PROVIDE (__valid_user_code_checksum = (0x0 - ((((((_vStackTop + (ResetISR + 0x1)) + (NMI_Handler + 0x1)) + (HardFault_Handler + 0x1)) + (DEFINED (MemManage_Handler)?MemManage_Handler:0x0 + 0x1)) + (DEFINED (BusFault_Handler)?BusFault_Handler:0x0 + 0x1)) + (DEFINED (UsageFault_Handler)?UsageFault_Handler:0x0 + 0x1))))
                 0x0000000000000000                _image_start = LOADADDR (.text)
-                0x00000000000025b8                _image_end = (LOADADDR (.data) + SIZEOF (.data))
-                0x00000000000025b8                _image_size = (_image_end - _image_start)
+                0x0000000000002614                _image_end = (LOADADDR (.data) + SIZEOF (.data))
+                0x0000000000002614                _image_size = (_image_end - _image_start)
 OUTPUT(ADCMSIS.axf elf32-littlearm)
 LOAD linker stubs
 
@@ -1790,30 +1790,30 @@ LOAD linker stubs
  .debug_ranges  0x0000000000000630       0x10 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/CMSIS_DSPLIB_CM3/lib/libCMSIS_DSPLIB_CM3.a(arm_fir_q31.o)
  .debug_ranges  0x0000000000000640       0x10 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/CMSIS_DSPLIB_CM3/lib/libCMSIS_DSPLIB_CM3.a(arm_scale_f32.o)
 
-.debug_line     0x0000000000000000     0x6a8d
+.debug_line     0x0000000000000000     0x6a87
  .debug_line    0x0000000000000000      0x2c3 ./src/ADCMSIS.o
- .debug_line    0x00000000000002c3      0x2fb ./src/adc.o
- .debug_line    0x00000000000005be      0x160 ./src/cr_startup_lpc175x_6x.o
- .debug_line    0x000000000000071e       0x2d ./src/crp.o
- .debug_line    0x000000000000074b      0x143 ./src/dac.o
- .debug_line    0x000000000000088e      0x16a ./src/filter.o
- .debug_line    0x00000000000009f8       0x55 ./src/sysinit.o
- .debug_line    0x0000000000000a4d      0xaa4 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_board_nxp_lpcxpresso_1769/Debug/liblpc_board_nxp_lpcxpresso_1769.a(board.o)
- .debug_line    0x00000000000014f1      0x57b /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_board_nxp_lpcxpresso_1769/Debug/liblpc_board_nxp_lpcxpresso_1769.a(board_sysinit.o)
- .debug_line    0x0000000000001a6c      0x6c4 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(adc_17xx_40xx.o)
- .debug_line    0x0000000000002130      0x527 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(chip_17xx_40xx.o)
- .debug_line    0x0000000000002657      0x98e /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
- .debug_line    0x0000000000002fe5      0x4e2 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(dac_17xx_40xx.o)
- .debug_line    0x00000000000034c7      0x543 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(iocon_17xx_40xx.o)
- .debug_line    0x0000000000003a0a      0x600 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(sysinit_17xx_40xx.o)
- .debug_line    0x000000000000400a      0xa69 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
- .debug_line    0x0000000000004a73      0x46b /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/CMSIS_DSPLIB_CM3/lib/libCMSIS_DSPLIB_CM3.a(arm_float_to_q31.o)
- .debug_line    0x0000000000004ede      0x499 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/CMSIS_DSPLIB_CM3/lib/libCMSIS_DSPLIB_CM3.a(arm_max_f32.o)
- .debug_line    0x0000000000005377      0x3e2 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/CMSIS_DSPLIB_CM3/lib/libCMSIS_DSPLIB_CM3.a(arm_biquad_cascade_df1_init_q31.o)
- .debug_line    0x0000000000005759      0x50a /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/CMSIS_DSPLIB_CM3/lib/libCMSIS_DSPLIB_CM3.a(arm_biquad_cascade_df1_q31.o)
- .debug_line    0x0000000000005c63      0x3cc /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/CMSIS_DSPLIB_CM3/lib/libCMSIS_DSPLIB_CM3.a(arm_fir_init_q31.o)
- .debug_line    0x000000000000602f      0x60d /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/CMSIS_DSPLIB_CM3/lib/libCMSIS_DSPLIB_CM3.a(arm_fir_q31.o)
- .debug_line    0x000000000000663c      0x451 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/CMSIS_DSPLIB_CM3/lib/libCMSIS_DSPLIB_CM3.a(arm_scale_f32.o)
+ .debug_line    0x00000000000002c3      0x2f5 ./src/adc.o
+ .debug_line    0x00000000000005b8      0x160 ./src/cr_startup_lpc175x_6x.o
+ .debug_line    0x0000000000000718       0x2d ./src/crp.o
+ .debug_line    0x0000000000000745      0x143 ./src/dac.o
+ .debug_line    0x0000000000000888      0x16a ./src/filter.o
+ .debug_line    0x00000000000009f2       0x55 ./src/sysinit.o
+ .debug_line    0x0000000000000a47      0xaa4 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_board_nxp_lpcxpresso_1769/Debug/liblpc_board_nxp_lpcxpresso_1769.a(board.o)
+ .debug_line    0x00000000000014eb      0x57b /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_board_nxp_lpcxpresso_1769/Debug/liblpc_board_nxp_lpcxpresso_1769.a(board_sysinit.o)
+ .debug_line    0x0000000000001a66      0x6c4 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(adc_17xx_40xx.o)
+ .debug_line    0x000000000000212a      0x527 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(chip_17xx_40xx.o)
+ .debug_line    0x0000000000002651      0x98e /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
+ .debug_line    0x0000000000002fdf      0x4e2 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(dac_17xx_40xx.o)
+ .debug_line    0x00000000000034c1      0x543 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(iocon_17xx_40xx.o)
+ .debug_line    0x0000000000003a04      0x600 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(sysinit_17xx_40xx.o)
+ .debug_line    0x0000000000004004      0xa69 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
+ .debug_line    0x0000000000004a6d      0x46b /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/CMSIS_DSPLIB_CM3/lib/libCMSIS_DSPLIB_CM3.a(arm_float_to_q31.o)
+ .debug_line    0x0000000000004ed8      0x499 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/CMSIS_DSPLIB_CM3/lib/libCMSIS_DSPLIB_CM3.a(arm_max_f32.o)
+ .debug_line    0x0000000000005371      0x3e2 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/CMSIS_DSPLIB_CM3/lib/libCMSIS_DSPLIB_CM3.a(arm_biquad_cascade_df1_init_q31.o)
+ .debug_line    0x0000000000005753      0x50a /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/CMSIS_DSPLIB_CM3/lib/libCMSIS_DSPLIB_CM3.a(arm_biquad_cascade_df1_q31.o)
+ .debug_line    0x0000000000005c5d      0x3cc /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/CMSIS_DSPLIB_CM3/lib/libCMSIS_DSPLIB_CM3.a(arm_fir_init_q31.o)
+ .debug_line    0x0000000000006029      0x60d /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/CMSIS_DSPLIB_CM3/lib/libCMSIS_DSPLIB_CM3.a(arm_fir_q31.o)
+ .debug_line    0x0000000000006636      0x451 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/CMSIS_DSPLIB_CM3/lib/libCMSIS_DSPLIB_CM3.a(arm_scale_f32.o)
 
 .debug_str      0x0000000000000000    0x13dd4
  .debug_str     0x0000000000000000      0x41b ./src/ADCMSIS.o

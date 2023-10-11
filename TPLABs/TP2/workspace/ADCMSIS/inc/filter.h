@@ -17,7 +17,7 @@
 
 #define FIR_TAP_NUM 39
 //#define FIR_TAP_NUM 41
-#define IIR_TAP_NUM 15
+#define IIR_TAP_NUM 24
 
 #define SAMPLES_PER_BLOCK 1024
 
