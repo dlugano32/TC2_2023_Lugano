@@ -48,11 +48,11 @@ void ADC_IRQHandler(void) {
 
 	if (estado==CARGANDO_A){
 			InputA[index] = data >> 2 ;
-			dacWrite(OutputB[index]);
+			dacWrite(OutputA[index]>>2);
 	}
 	else {
 		InputB[index] = data >> 2 ;
-		dacWrite( OutputA[index]);
+		dacWrite( OutputB[index]>>2);
 	}
 
 	index++;

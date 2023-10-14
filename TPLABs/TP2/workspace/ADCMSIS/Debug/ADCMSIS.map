@@ -1160,14 +1160,14 @@ END GROUP
                 0x00000000000000cc                __data_section_table = .
                 0x00000000000000cc        0x4 LONG 0x2514 LOADADDR (.data)
                 0x00000000000000d0        0x4 LONG 0x10000000 ADDR (.data)
-                0x00000000000000d4        0x4 LONG 0x100 SIZEOF (.data)
+                0x00000000000000d4        0x4 LONG 0xf8 SIZEOF (.data)
                 0x00000000000000d8        0x4 LONG 0x2514 LOADADDR (.data_RAM2)
                 0x00000000000000dc        0x4 LONG 0x2007c000 ADDR (.data_RAM2)
                 0x00000000000000e0        0x4 LONG 0x0 SIZEOF (.data_RAM2)
                 0x00000000000000e4                __data_section_table_end = .
                 0x00000000000000e4                __bss_section_table = .
-                0x00000000000000e4        0x4 LONG 0x10000100 ADDR (.bss)
-                0x00000000000000e8        0x4 LONG 0x6218 SIZEOF (.bss)
+                0x00000000000000e4        0x4 LONG 0x100000f8 ADDR (.bss)
+                0x00000000000000e8        0x4 LONG 0x6208 SIZEOF (.bss)
                 0x00000000000000ec        0x4 LONG 0x2007c000 ADDR (.bss_RAM2)
                 0x00000000000000f0        0x4 LONG 0x0 SIZEOF (.bss_RAM2)
                 0x00000000000000f4                __bss_section_table_end = .
@@ -1557,7 +1557,7 @@ END GROUP
                 0x0000000010000000                . = ALIGN (0x4)
                 0x0000000010000000                _end_uninit_RESERVED = .
 
-.data           0x0000000010000000      0x100 load address 0x0000000000002514
+.data           0x0000000010000000       0xf8 load address 0x0000000000002514
  FILL mask 0xff
                 0x0000000010000000                _data = .
                 [!provide]                        PROVIDE (__start_data_RAM = .)
@@ -1572,18 +1572,18 @@ END GROUP
                 0x0000000010000000                filter
  *fill*         0x0000000010000001        0x3 ff
  .data.float_fir_taps
-                0x0000000010000004       0x9c ./src/filter.o
+                0x0000000010000004       0xa4 ./src/filter.o
                 0x0000000010000004                float_fir_taps
  .data.float_iir_taps
-                0x00000000100000a0       0x60 ./src/filter.o
-                0x00000000100000a0                float_iir_taps
-                0x0000000010000100                . = ALIGN (0x4)
-                0x0000000010000100                _edata = .
+                0x00000000100000a8       0x50 ./src/filter.o
+                0x00000000100000a8                float_iir_taps
+                0x00000000100000f8                . = ALIGN (0x4)
+                0x00000000100000f8                _edata = .
                 [!provide]                        PROVIDE (__end_data_RAM = .)
                 [!provide]                        PROVIDE (__end_data_RamLoc32 = .)
 
-.igot.plt       0x0000000010000100        0x0 load address 0x0000000000002614
- .igot.plt      0x0000000010000100        0x0 ./src/ADCMSIS.o
+.igot.plt       0x00000000100000f8        0x0 load address 0x000000000000260c
+ .igot.plt      0x00000000100000f8        0x0 ./src/ADCMSIS.o
 
 .bss_RAM2       0x000000002007c000        0x0
                 [!provide]                        PROVIDE (__start_bss_RAM2 = .)
@@ -1596,46 +1596,46 @@ END GROUP
                 [!provide]                        PROVIDE (__end_bss_RAM2 = .)
                 [!provide]                        PROVIDE (__end_bss_RamAHB32 = .)
 
-.bss            0x0000000010000100     0x6218
-                0x0000000010000100                _bss = .
+.bss            0x00000000100000f8     0x6208
+                0x00000000100000f8                _bss = .
                 [!provide]                        PROVIDE (__start_bss_RAM = .)
                 [!provide]                        PROVIDE (__start_bss_RamLoc32 = .)
  *(.bss*)
- .bss.SFIR      0x0000000010000100        0xc ./src/ADCMSIS.o
-                0x0000000010000100                SFIR
- .bss.SIIR      0x000000001000010c       0x10 ./src/ADCMSIS.o
-                0x000000001000010c                SIIR
+ .bss.SFIR      0x00000000100000f8        0xc ./src/ADCMSIS.o
+                0x00000000100000f8                SFIR
+ .bss.SIIR      0x0000000010000104       0x10 ./src/ADCMSIS.o
+                0x0000000010000104                SIIR
  .bss.fir_state
-                0x000000001000011c     0x1098 ./src/ADCMSIS.o
-                0x000000001000011c                fir_state
+                0x0000000010000114     0x10a0 ./src/ADCMSIS.o
+                0x0000000010000114                fir_state
  .bss.iir_state
-                0x00000000100011b4     0x105c ./src/ADCMSIS.o
+                0x00000000100011b4     0x104c ./src/ADCMSIS.o
                 0x00000000100011b4                iir_state
- .bss.InputA    0x0000000010002210     0x1000 ./src/ADCMSIS.o
-                0x0000000010002210                InputA
- .bss.InputB    0x0000000010003210     0x1000 ./src/ADCMSIS.o
-                0x0000000010003210                InputB
- .bss.OutputA   0x0000000010004210     0x1000 ./src/ADCMSIS.o
-                0x0000000010004210                OutputA
- .bss.OutputB   0x0000000010005210     0x1000 ./src/ADCMSIS.o
-                0x0000000010005210                OutputB
- .bss.estado    0x0000000010006210        0x1 ./src/adc.o
-                0x0000000010006210                estado
- .bss.procesar  0x0000000010006211        0x1 ./src/adc.o
-                0x0000000010006211                procesar
- .bss.data.1    0x0000000010006212        0x2 ./src/adc.o
- .bss.index.0   0x0000000010006214        0x2 ./src/adc.o
- *fill*         0x0000000010006216        0x2 
- .bss.fir_taps  0x0000000010006218       0x9c ./src/filter.o
-                0x0000000010006218                fir_taps
- .bss.iir_taps  0x00000000100062b4       0x60 ./src/filter.o
-                0x00000000100062b4                iir_taps
+ .bss.InputA    0x0000000010002200     0x1000 ./src/ADCMSIS.o
+                0x0000000010002200                InputA
+ .bss.InputB    0x0000000010003200     0x1000 ./src/ADCMSIS.o
+                0x0000000010003200                InputB
+ .bss.OutputA   0x0000000010004200     0x1000 ./src/ADCMSIS.o
+                0x0000000010004200                OutputA
+ .bss.OutputB   0x0000000010005200     0x1000 ./src/ADCMSIS.o
+                0x0000000010005200                OutputB
+ .bss.estado    0x0000000010006200        0x1 ./src/adc.o
+                0x0000000010006200                estado
+ .bss.procesar  0x0000000010006201        0x1 ./src/adc.o
+                0x0000000010006201                procesar
+ .bss.data.1    0x0000000010006202        0x2 ./src/adc.o
+ .bss.index.0   0x0000000010006204        0x2 ./src/adc.o
+ *fill*         0x0000000010006206        0x2 
+ .bss.fir_taps  0x0000000010006208       0xa4 ./src/filter.o
+                0x0000000010006208                fir_taps
+ .bss.iir_taps  0x00000000100062ac       0x50 ./src/filter.o
+                0x00000000100062ac                iir_taps
  .bss.SystemCoreClock
-                0x0000000010006314        0x4 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(chip_17xx_40xx.o)
-                0x0000000010006314                SystemCoreClock
+                0x00000000100062fc        0x4 /home/dlugano/UTN/TC2/TC2_2023_Lugano/TPLABs/TP2/workspace/lpc_chip_175x_6x/Debug/liblpc_chip_175x_6x.a(chip_17xx_40xx.o)
+                0x00000000100062fc                SystemCoreClock
  *(COMMON)
-                0x0000000010006318                . = ALIGN (0x4)
-                0x0000000010006318                _ebss = .
+                0x0000000010006300                . = ALIGN (0x4)
+                0x0000000010006300                _ebss = .
                 [!provide]                        PROVIDE (__end_bss_RAM = .)
                 [!provide]                        PROVIDE (__end_bss_RamLoc32 = .)
                 [!provide]                        PROVIDE (end = .)
@@ -1651,21 +1651,21 @@ END GROUP
                 [!provide]                        PROVIDE (__end_noinit_RAM2 = .)
                 [!provide]                        PROVIDE (__end_noinit_RamAHB32 = .)
 
-.noinit         0x0000000010006318        0x0
-                0x0000000010006318                _noinit = .
+.noinit         0x0000000010006300        0x0
+                0x0000000010006300                _noinit = .
                 [!provide]                        PROVIDE (__start_noinit_RAM = .)
                 [!provide]                        PROVIDE (__start_noinit_RamLoc32 = .)
  *(.noinit*)
-                0x0000000010006318                . = ALIGN (0x4)
-                0x0000000010006318                _end_noinit = .
+                0x0000000010006300                . = ALIGN (0x4)
+                0x0000000010006300                _end_noinit = .
                 [!provide]                        PROVIDE (__end_noinit_RAM = .)
                 [!provide]                        PROVIDE (__end_noinit_RamLoc32 = .)
                 [!provide]                        PROVIDE (_pvHeapStart = DEFINED (__user_heap_base)?__user_heap_base:.)
                 0x0000000010008000                PROVIDE (_vStackTop = DEFINED (__user_stack_top)?__user_stack_top:(__top_RamLoc32 - 0x0))
                 0xffffffffefff74c6                PROVIDE (__valid_user_code_checksum = (0x0 - ((((((_vStackTop + (ResetISR + 0x1)) + (NMI_Handler + 0x1)) + (HardFault_Handler + 0x1)) + (DEFINED (MemManage_Handler)?MemManage_Handler:0x0 + 0x1)) + (DEFINED (BusFault_Handler)?BusFault_Handler:0x0 + 0x1)) + (DEFINED (UsageFault_Handler)?UsageFault_Handler:0x0 + 0x1))))
                 0x0000000000000000                _image_start = LOADADDR (.text)
-                0x0000000000002614                _image_end = (LOADADDR (.data) + SIZEOF (.data))
-                0x0000000000002614                _image_size = (_image_end - _image_start)
+                0x000000000000260c                _image_end = (LOADADDR (.data) + SIZEOF (.data))
+                0x000000000000260c                _image_size = (_image_end - _image_start)
 OUTPUT(ADCMSIS.axf elf32-littlearm)
 LOAD linker stubs
 

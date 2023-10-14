@@ -15,8 +15,8 @@
 #include <stdint.h>
 #include "arm_math.h"
 
-//#define FIR_TAP_NUM 39
-#define FIR_TAP_NUM 41
+#define FIR_TAP_NUM 39				//FILTRO FIR 1
+//#define FIR_TAP_NUM 41			FILTRO FIR 2
 #define IIR_TAP_NUM 20
 
 #define SAMPLES_PER_BLOCK 1024
